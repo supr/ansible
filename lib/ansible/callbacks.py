@@ -509,7 +509,8 @@ class PlaybookRunnerCallbacks(DefaultRunnerCallbacks):
 
         if msg != '':
             if not changed:
-                display(msg, color='green', runner=self.runner)
+                pass
+                #display(msg, color='green', runner=self.runner)
             else:
                 display(msg, color='yellow', runner=self.runner)
         super(PlaybookRunnerCallbacks, self).on_ok(host, host_result)
@@ -661,7 +662,7 @@ class PlaybookCallbacks(object):
         return result
 
     def on_setup(self):
-        display(banner("GATHERING FACTS"))
+        #display(banner("GATHERING FACTS"))
         call_callback_module('playbook_on_setup')
 
     def on_import_for_host(self, host, imported_file):

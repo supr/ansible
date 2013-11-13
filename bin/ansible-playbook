@@ -209,7 +209,7 @@ def main(args):
             pb.run()
 
             hosts = sorted(pb.stats.processed.keys())
-            display(callbacks.banner("PLAY RECAP"))
+            #display(callbacks.banner("PLAY RECAP"))
             playbook_cb.on_stats(pb.stats)
 
             for h in hosts:
@@ -227,6 +227,7 @@ def main(args):
                     display("           to retry, use: --limit @%s\n" % filename)
 
             for h in hosts:
+                continue
                 t = pb.stats.summarize(h)
 
                 display("%s : %s %s %s %s" % (
